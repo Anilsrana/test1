@@ -23,7 +23,10 @@ jobs:
 
       - name: Install Akamai CLI Purge
         run: |
-          curl -sL https://akamai.github.io/cli-install/install.sh | sh
+          curl -L https://github.com/akamai/cli/releases/download/v1.6.0/akamai-v1.6.0-linuxamd64 -o ~/akamai
+          chmod +x ~/akamai
+          sudo mv ~/akamai /usr/local/bin/akamai
+          akamai --version
           akamai install purge
 
       - name: Setup .edgerc
