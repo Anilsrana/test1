@@ -31,4 +31,5 @@ jobs:
           mkdir -p ~/.akamai-cli
           echo "${{ secrets.EDGERC_FILE }}" > ~/.edgerc
           chmod 600 ~/.edgerc
+          cat ~/.edgerc
           
